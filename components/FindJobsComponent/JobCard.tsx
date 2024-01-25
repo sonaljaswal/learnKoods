@@ -36,7 +36,7 @@ const JobCard = ({item}:any) => {
   return (
     <div className='border sm:p-8 p-4 rounded-lg flex gap-4'>
         <div className='h-[50px] w-[50px] rounded-md '>
-            <Image src={`${item.url}`} alt={`${item?.company}`} width={1000} height={1000} className='h-[100%] w-[100%] rounded-md object-fill'/>
+            <Image src={`${item?.job_image}`} alt={`${item?.company}`} width={1000} height={1000} className='h-[100%] w-[100%] rounded-md object-fill'/>
         </div>
         <div className='flex flex-col gap-4'>
           <Link href={`${item.url}`}>

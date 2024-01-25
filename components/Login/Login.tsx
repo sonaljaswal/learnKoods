@@ -72,10 +72,7 @@ const Login = ({ setIsOpen, isOpen ,setUsername}: any) => {
         // setIsOpen(false)
 
         const result=await loginResponse.json();
-     
-
         setUsername(result.data.username)
-        
         setIsOpen(false) 
         document.body.classList.remove("no-scroll")
         setLoginError('User logged in successfully');
@@ -109,6 +106,10 @@ const Login = ({ setIsOpen, isOpen ,setUsername}: any) => {
         body: requestBody,
       });
       if (response.ok) {
+        const result=await response.json();
+        // console.log(result)
+        setUsername(result.payload.username)
+        // console.log("result",result);
         console.log("fff")
         setLoading(false)
         setIsOpen(false)
